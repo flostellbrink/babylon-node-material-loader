@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "babylon-node-material-loader",
+  "author": "Florian Stellbrink",
+  "module": "dist/babylon-node-material-loader.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/babylon-node-material-loader.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/babylon-node-material-loader.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babylonjs/core": "^4.2.0",
+    "@size-limit/preset-small-lib": "^6.0.1",
+    "@types/webpack": "^5.28.0",
+    "husky": "^7.0.2",
+    "rollup-plugin-internal": "^1.0.4",
+    "size-limit": "^6.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {}
+}
