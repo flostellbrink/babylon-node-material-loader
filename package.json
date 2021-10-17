@@ -33,6 +33,7 @@
   },
   "name": "babylon-node-material-loader",
   "author": "Florian Stellbrink",
+  "repository": "https://github.com/flostellbrink/babylon-node-material-loader",
   "module": "dist/babylon-node-material-loader.esm.js",
   "size-limit": [
     {
